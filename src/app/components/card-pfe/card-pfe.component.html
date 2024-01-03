@@ -15,7 +15,7 @@
                 <p class="lead">Les concentrations les plus efficaces étaient de 80 g/l pour l’extrait de C. baccata et 20 g/l pour P. pavonica. Les extraits ont eu des efficacités variables pour chaque espèce. En outre, le prétraitement a positivement impacté la croissance des plantules, avec une augmentation significative de la longueur des racines et des parties aériennes. Les stimulations les plus fortes ont été observées chez les plantules de carotte et de maïs prétraitées avec l’extrait de P. pavonica, et chez celles de lin et de persil avec l’extrait de C. baccata. Cette amélioration semble liée à une meilleure intégrité membranaire, une respiration mitochondriale améliorée, et une augmentation des sucres solubles totaux. Le priming des graines avec ces extraits apparaît donc comme une méthode fiable pour améliorer la croissance et la germination, et pourrait être utilisé pour augmenter les rendements des cultures.</p>
                 <div class="d-flex text-center">
                     <input class="btn btn-outline-dark flex-shrink-0"  (click)="downloadPdf()" type="button" value="télécharger"  />
-                    <button class="btn btn-outline-dark flex-shrink-0" type="button" (click)="downloadPdf()"  >
+                    <button class="btn btn-outline-dark flex-shrink-0" type="button" target="_blank " href="../../../assets/agriculturedurable.html.html"  >
                         En savoir plus
                     </button>
                 </div>
@@ -23,4 +23,10 @@
         </div>
     </div>
 </section>
+
+<section>
+    <iframe [src]="pdfUrl" width="100%" height="500px"></iframe>
+</section>
 <!-- pdf-viewer.component.html -->
+
+

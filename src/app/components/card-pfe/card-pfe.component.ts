@@ -1,3 +1,4 @@
+import { DomSanitizer } from '@angular/platform-browser';
 import { PdfDownloadServiceService } from './../../services/pdf-download-service.service';
 import { Component } from '@angular/core';
 
@@ -10,10 +11,15 @@ import { Component } from '@angular/core';
 export class CardPfeComponent {
    
   
+  pdfUrl: any;
 
   pdfSrc: string = "../../../assets/images/image-master.JPG"; // This should be a PDF path
-  zoom: number = 1;
-  constructor(private pdfService: PdfDownloadServiceService) { }
+
+   zoom: number = 1;
+  constructor(private pdfService: PdfDownloadServiceService  ,private sanitizer: DomSanitizer) { 
+    this.pdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl("./../../assets/pdf/Mastère-Houssem-El-Mabrouk.pdf");
+
+  }
 
   downloadPdf() {
     this.pdfService.downloadPdf().subscribe((blob: Blob | MediaSource) => {
@@ -25,5 +31,7 @@ export class CardPfeComponent {
       window.URL.revokeObjectURL(url);
     });
 }
+
+
 
 }

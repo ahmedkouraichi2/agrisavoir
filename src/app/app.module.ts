@@ -8,6 +8,7 @@ import { CardPfeComponent } from './components/card-pfe/card-pfe.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { ItemsComponent } from './components/items/items.component';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
